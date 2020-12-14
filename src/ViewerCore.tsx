@@ -173,10 +173,14 @@ export default (props: ViewerProps) => {
   }, [visible]);
 
   React.useEffect(() => {
-    if(visible) bindEvent();
+    if (visible) {
+      bindEvent();
+    }
 
     return () => {
-      if(visible) bindEvent(true);
+      if (visible) {
+        bindEvent(true);
+      }
     };
   }, [visible]);
 
